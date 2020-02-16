@@ -1,3 +1,46 @@
-<p class="alert alert-danger">
-  Server '{{ serverName }}' is {{ serverStatus }}!
-</p>
+<div class="container" style="margin-top:20px">
+  <div class="row">
+    <div class="col-md-3">
+      <label>Id</label>
+      <input
+        id="txtServerName"
+        class="form-control"
+        type="number"
+        [value]="serverName"
+        (input)="handleInputChange($event)"
+      />
+    </div>
+    <div class="col-md-4">
+      <label>Description</label>
+      <input type="text" class="form-control" [(ngModel)]="serverDescription" />
+    </div>
+    <div class="col-md-1">
+      <button
+        id="btnAddServer"
+        style="margin-top: 30px"
+        class="btn"
+        [ngClass]="{
+          'btn-success': serverStatus === 'offline',
+          'btn-danger': serverStatus === 'online'
+        }"
+        (click)="handleAddServer()"
+        [disabled]="!allowAddServer"
+      >
+        {{ serverStatus === "offline" ? "Start" : "Stop" }}
+      </button>
+    </div>
+    <div class="col-md-4">
+      <p
+        [ngClass]="
+          serverStatus === 'offline'
+            ? 'alert alert-danger'
+            : 'alert alert-success'
+        "
+        style="margin-top: 20px"
+      >
+        Server with Id {{ serverName }} called {{ serverDescription }} is
+        {{ serverStatus }}!
+      </p>
+    </div>
+  </div>
+</div>

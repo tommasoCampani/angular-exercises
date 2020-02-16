@@ -9,6 +9,7 @@ import { PilComponent } from "./pil/pil.component";
 import { WarningAlertComponent } from "./warning-alert/warning-alert.component";
 import { SuccessAlertComponent } from "./success-alert/success-alert.component";
 import { ServerComponent } from "./server-component/server.component";
+import { DatabindingComponentComponent } from './databinding-component/databinding-component.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ServerComponent } from "./server-component/server.component";
     PilComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    ServerComponent
+    ServerComponent,
+    DatabindingComponentComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
