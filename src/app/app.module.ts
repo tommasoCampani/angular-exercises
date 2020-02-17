@@ -10,6 +10,7 @@ import { WarningAlertComponent } from "./warning-alert/warning-alert.component";
 import { SuccessAlertComponent } from "./success-alert/success-alert.component";
 import { ServerComponent } from "./server-component/server.component";
 import { DatabindingComponentComponent } from './databinding-component/databinding-component.component';
+import { TestDirectiveComponent } from './test-directive/test-directive.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DatabindingComponentComponent } from './databinding-component/databindi
     WarningAlertComponent,
     SuccessAlertComponent,
     ServerComponent,
-    DatabindingComponentComponent
+    DatabindingComponentComponent,
+    TestDirectiveComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
